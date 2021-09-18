@@ -18,7 +18,7 @@ server.on('request', (req, res) => {
         if (pathname.includes('/')) {
           res.statusCode = 400;
           res.end(e.message);
-        } else {
+        } else if (e.code === 'ENOENT') {
           res.statusCode = 404;
           res.end(e.message);
         }
