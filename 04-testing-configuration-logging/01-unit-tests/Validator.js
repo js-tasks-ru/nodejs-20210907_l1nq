@@ -14,7 +14,8 @@ module.exports = class Validator {
 
       if (type !== rules.type) {
         errors.push({field, error: `expect ${rules.type}, got ${type}`});
-        return errors;
+        continue;
+        // continue, а не break
       }
 
       switch (type) {

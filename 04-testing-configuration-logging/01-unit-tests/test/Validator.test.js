@@ -74,8 +74,8 @@ describe('testing-configuration-logging/unit-tests', () => {
       expect(error).to.have.length(2);
       expect(error[0]).to.have.property('field').and.to.be.equal('name');
       expect(error[0]).to.have.property('error').and.to.be.equal('expect string, got number');
-      expect(error[0]).to.have.property('field').and.to.be.equal('age');
-      expect(error[0]).to.have.property('error').and.to.be.equal('too little, expect 6, got 5');
+      expect(error[1]).to.have.property('field').and.to.be.equal('age');
+      expect(error[1]).to.have.property('error').and.to.be.equal('too little, expect 6, got 5');
     });
   });
 });
